@@ -13,7 +13,6 @@
         <div id="container"></div>
         <header class="info">
         </header>
-        
         <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
         <script src="sketch.js"></script>
         <script>
@@ -32,8 +31,8 @@
 
             setup: function() {
 
-                camera = new THREE.PerspectiveCamera( 1000, this.width / this.height, 1, 10000 );
-                camera.position.z = 100;
+                camera = new THREE.PerspectiveCamera( 15000, this.width / this.height, 10, 10000 );
+                camera.position.z = 50;
 
                 scene = new THREE.Scene();
 
