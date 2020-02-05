@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>sketch.js &raquo; THREE.js Example</title>
+        <link rel="stylesheet" href="css/example.css">
+        <style type="text/css">
+            html, body {
+                background: #682924;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+        <header class="info">
+        </header>
+        
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
+        <script src="./js/sketch.js"></script>
+        <script>
+
+        var camera, scene, geometry, material, mesh, renderer = new THREE.WebGLRenderer();
+
+        var demo = Sketch.create({
+
+            type: Sketch.WEBGL,
+
+            // Use existing element
+            element: renderer.domElement,
+
+            // Use existing context
+            context: renderer.context,
+
+            setup: function() {
+
+                camera = new THREE.PerspectiveCamera( 1000, this.width / this.height, 1, 10000 );
+                camera.position.z = 100;
+
+                scene = new THREE.Scene();
+
+                geometry = new THREE.CubeGeometry( 300, 200, 200 );
+                material = new THREE.MeshBasicMaterial( { color: 0xFFFF00, wireframe: true } );
+
+                mesh = new THREE.Mesh( geometry, material );
+                scene.add( mesh );
+            },
+
+            resize: function() {
+
+                camera.aspect = this.width / this.height;
+                camera.updateProjectionMatrix();
+
+                renderer.setSize( this.width, this.height );
+            },
+
+            draw: function() {
+
+                mesh.rotation.x += 0.01;
+                mesh.rotation.y += 0.02;
+
+                renderer.render( scene, camera );
+            }
+        });
+        
+        </script>
+    </body>
+</html>
