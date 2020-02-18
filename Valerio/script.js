@@ -6,13 +6,13 @@
   
     particles = [];
   
-    particleCount = 750;
+    particleCount = 5000;
   
-    sketch.mouse.x = sketch.width / 2;
+    sketch.mouse.x = sketch.width / 5;
   
-    sketch.mouse.y = sketch.height / 2;
+    sketch.mouse.y = sketch.height / 5;
   
-    sketch.strokeStyle = 'hsla(200, 50%, 50%, .4)';
+    sketch.strokeStyle = 'hsla(200, 50%, 50%, .8)';
   
     sketch.globalCompositeOperation = 'lighter';
   
@@ -24,8 +24,8 @@
       this.vx = 0;
       this.vy = -random(1, 10) / 5;
       this.radius = this.baseRadius = 1;
-      this.maxRadius = 50;
-      this.threshold = 150;
+      this.maxRadius = 80;
+      this.threshold = 200;
       return this.hue = random(180, 240);
     };
   
@@ -48,7 +48,7 @@
         
         // Adjust Velocity
         this.vx += (random(100) - 50) / 1000;
-        this.vy -= random(1, 20) / 10000;
+        this.vy -= random(1, 30) / 100;
         
         // Apply Velocity
         this.x += this.vx;
@@ -59,7 +59,7 @@
           this.x = random(sketch.width);
           this.y = random(sketch.height + this.maxRadius, sketch.height * 2);
           this.vx = 0;
-          return this.vy = -random(1, 10) / 5;
+          return this.vy = -random(1, 10) / 2;
         }
       },
       render: function() {
