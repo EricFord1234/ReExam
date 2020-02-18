@@ -24,7 +24,7 @@
 var settings = {
   interactive: false,
   darkTheme: true,
-  headRadius: 60,
+  headRadius: 6,
   thickness: 18,
   tentacles: 40,
   friction: 0.02,
