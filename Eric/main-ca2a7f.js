@@ -5,7 +5,7 @@ var n={};return t.m=e,t.c=n,t.p="",t(0)}
 
 ([function(e,t,n){"use strict";function i(e){
 return e&&e.__esModule?e:{default:e}}
-var r=n(3),o=i(r),s=n(1),a=i(s),u=n(4),c=i(u),l=c.default.create({container:document.getElementById("container"),autoclear:!1,retina:"auto",settings:{iterations:130,randomness:.50,opposite:.1,minAngle:.4,minSide:2},polygons:[],lines:[],setup:function()
+var r=n(3),o=i(r),s=n(1),a=i(s),u=n(4),c=i(u),l=c.default.create({container:document.getElementById("container"),autoclear:!1,retina:"auto",settings:{iterations:100,randomness:.60,opposite:.2,minAngle:.5,minSide:3},polygons:[],lines:[],setup:function()
 
 {this.reset()},step:function(){
 var e=this,t=~~random(this.polygons.length-1),n=this.polygons[t].subdivide(this.settings.randomness,this.settings.opposite),i=!1,r=void 0,o=void 0,s=n.length;
