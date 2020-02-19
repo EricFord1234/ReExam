@@ -24,9 +24,9 @@
       this.vx = 0;
       this.vy = -random(1, 10) / 5;
       this.radius = this.baseRadius = 1;
-      this.maxRadius = 80;
+      this.maxRadius = 250;
       this.threshold = 200;
-      return this.hue = random(180, 240);
+      return this.hue = random(180, 400);
     };
   
     // Particle Prototype
