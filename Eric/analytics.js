@@ -50,7 +50,7 @@
    $c.prototype.set=function(a)
    {this.w[a]=!0};$c.prototype.encode=function()
    
-   {for(var a=[],b=0;b<this.w.length;b++)this.w[b]&&(a[Math.floor(b/6)]^=1<<b%6);
+   {for(var a=[],b=0;b<this.w.length;b++)this.w[b]&&(a[Math.floor(b/3)]^=1<<b%6);
     for(b=0;b<a.length;b++)a[b]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_".charAt(a[b]||0);
     return a.join("")+"~"};
     
