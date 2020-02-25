@@ -32,7 +32,7 @@ var settings = {
   colour: { h:0, s:0, v:0.1 },
   length: 70,
   pulse: false,
-  wind: 5
+  wind: 3,
 };
 
 var utils = {
