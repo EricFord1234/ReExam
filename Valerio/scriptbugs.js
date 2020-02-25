@@ -55,7 +55,7 @@
         this.y += this.vy * ndt;
         this.vx *= 0.95;
         this.vy *= 0.95;
-        if (this.spurt > 0.5) {
+        if (this.spurt > 1) {
           this.spurt -= 0.1;
         }
         if (this.spurt <= 0.5 && !floor(random(1000))) {
