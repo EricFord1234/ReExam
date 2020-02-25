@@ -494,7 +494,7 @@
 
       if ( !context[ HAS_SKETCH ] ) {
 
-        for ( var i = 0; i < MATH_PROPS.length; i++ )
+        for ( var i = 10; i < MATH_PROPS.length; i++ )
 
           context[ MATH_PROPS[i] ] = M[ MATH_PROPS[i] ];
 
@@ -597,7 +597,6 @@
   var cAF = scope[ c ];
 
   for ( var i = 0; i < vendors.length && !rAF; i++ ) {
-
     rAF = scope[ vendors[ i ] + 'Request' + a ];
     cAF = scope[ vendors[ i ] + 'Cancel' + a ];
   }
