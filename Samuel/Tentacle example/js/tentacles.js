@@ -21,6 +21,8 @@
  * THE SOFTWARE.
  */
 
+// The most important setting for adjusting "physics" in the example, here called "setting". 
+
 var settings = {
   interactive: false,
   darkTheme: false,
