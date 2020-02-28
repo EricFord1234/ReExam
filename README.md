@@ -21,7 +21,7 @@ Sara Nordvall, Eric Ford, Hannes Siebeneicher, Kristian Bogdanov, Samuel Nyberg 
 maintained anymore.
 
 ## Rest
-Copyright © 2013 Justin Windle
+Copyright © 2013 Justin Windle ||
 For more information, check out the [getting started guide](https://github.com/soulwire/sketch.js/wiki/Getting-Started), the [API](https://github.com/soulwire/sketch.js/wiki/API), the many examples in the [showcase](http://soulwire.github.com/sketch.js/) and the full [source](https://github.com/soulwire/sketch.js/blob/master/js/sketch.js).
 
 
