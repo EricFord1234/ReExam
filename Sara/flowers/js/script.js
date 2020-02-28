@@ -4,7 +4,7 @@ $(function() {
 	var flowers = [];
 
 	var types = {
-		"wave" : function(ctx, that) {
+		"explode" : function(ctx, that) {
 			ctx.fillStyle = that.colorPrimary;
 
 			var radius = abs(that.x_0);
@@ -12,7 +12,7 @@ $(function() {
 			var angleStep = TWO_PI/140;
 
 			ctx.moveTo(radius*cos(0.0), radius*sin(0.0));
-			for(var angle = 0.0; angle < TWO_PI; angle += angleStep) {
+			for(var angle = 0.2; angle < TWO_PI; angle += angleStep) {
 
 				var rad = 
 					radius + 
@@ -42,18 +42,18 @@ $(function() {
 		var flower = [];
 
 		var previousRadius = 0.0;
-		while(previousRadius <= 1.0) {
-			previousRadius += random(0.1, 0.2);
-			if(previousRadius > 1.0) break;
+		while(previousRadius <= 4.0) {
+			previousRadius += random(0.4, 0.7);
+			if(previousRadius > 4.0) break;
 
 			var colorPrimary = 
 				'rgb(' + 
-					randomi(0, 234) + ',' +
-					randomi(0, 255) + ',' +
-					randomi(0, 255) + ')';
+					randomi(0, 235) + ',' +
+					randomi(0, 256) + ',' +
+					randomi(0, 245) + ')';
 
 			var params = [
-				random(0, 0.07),
+				random(1, 0.07),
 				randomi(5, 20),
 				random(5, 10),
 				random(0.5, 2)
@@ -62,9 +62,9 @@ $(function() {
 			flower.unshift({
 				radius 			: previousRadius,
 				colorPrimary 	: colorPrimary,
-				type 			: random(['wave', 'wave']),
+				type 			: random(['explode', 'explode']),
 				params 			: params,
-				x_0 			: random(0.0,0.1),
+				x_0 			: random(0.5,0.1),
 				x_1				: 0
 			});
 		}	
