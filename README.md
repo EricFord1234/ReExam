@@ -10,6 +10,3 @@
 ## How users can get started with the project
 
 ## Who maintains and contributes to the project
-
-## Where users can get help with your project
-Nope. 
