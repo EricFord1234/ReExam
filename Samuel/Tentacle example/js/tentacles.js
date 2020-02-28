@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-// The most important setting for adjusting "physics" in the example, here called "setting". 
+// These most important setting for adjusting "physics" in the example, here in a variable named "settings". 
 
 var settings = {
   interactive: false,
