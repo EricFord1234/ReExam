@@ -1,3 +1,5 @@
+// this spurt changed
+
 (function() {
     var Bug, Food;
   
@@ -14,6 +16,8 @@
         this;
       }
   
+      // conditional statement changed
+
       update(ctx, index, ndt) {
         var closestTarget, dist, dx, dy, food, i, lowestDist, target;
         this.hasTarget = false;
@@ -42,6 +46,9 @@
             }
           }
         }
+
+              // conditional statement changed
+
         if (this.hasTarget) {
           this.vx += (random(-0.2, 0.2)) * this.spurt;
           this.vy += (random(-0.2, 0.2)) * this.spurt;
@@ -80,6 +87,8 @@
   
     };
   
+    // radius and threshold changed
+
     Food = class Food {
       constructor(x, y) {
         this.x = x;
@@ -105,6 +114,8 @@
       }
   
     };
+
+    // width and height changed
   
     Sketch.create({
       setup: function() {
@@ -151,6 +162,9 @@
         }
         return results;
       },
+
+      // color changed
+      
       draw: function() {
         var bug, food, i;
         this.fillStyle = '#7AFF50';

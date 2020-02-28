@@ -1,5 +1,6 @@
 (function() {
-    // General Variables
+    // particleCount changed to create a different background
+    
     var Particle, particleCount, particles, sketch, z;
   
     sketch = Sketch.create();
@@ -17,7 +18,7 @@
     sketch.globalCompositeOperation = 'lighter';
   
     
-    // Particle Constructor
+    // Radius changed to make the bubbles bigger, the hue has been changed too
     Particle = function() {
       this.x = random(sketch.width);
       this.y = random(sketch.height, sketch.height * 2);
@@ -29,11 +30,11 @@
       return this.hue = random(180, 400);
     };
   
-    // Particle Prototype
+
     Particle.prototype = {
       update: function() {
         var dist, distx, disty, radius;
-        // Determine Distance From Mouse
+   
         distx = this.x - sketch.mouse.x;
         disty = this.y - sketch.mouse.y;
         dist = sqrt(distx * distx + disty * disty);
@@ -46,15 +47,15 @@
           this.radius = this.baseRadius;
         }
         
-        // Adjust Velocity
+        // Velocity changed to make the animation faster and more interactive
         this.vx += (random(100) - 50) / 1000;
         this.vy -= random(1, 30) / 100;
         
-        // Apply Velocity
+    
         this.x += this.vx;
         this.y += this.vy;
         
-        // Check Bounds   
+      
         if (this.x < -this.maxRadius || this.x > sketch.width + this.maxRadius || this.y < -this.maxRadius) {
           this.x = random(sketch.width);
           this.y = random(sketch.height + this.maxRadius, sketch.height * 2);
@@ -72,20 +73,20 @@
       }
     };
   
-    // Create Particles
+ 
     z = particleCount;
   
     while (z--) {
       particles.push(new Particle());
     }
   
-    // Sketch Clear
+   
     sketch.clear = function() {
       return sketch.clearRect(0, 0, sketch.width, sketch.height);
     };
   
     
-    // Sketch Update
+
     sketch.update = function() {
       var i, results;
       i = particles.length;
@@ -96,7 +97,7 @@
       return results;
     };
   
-    // Sketch Draw
+   
     sketch.draw = function() {
       var i, results;
       i = particles.length;
