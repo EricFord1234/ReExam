@@ -2,7 +2,7 @@ $(function() {
 	var ctx = Sketch.create();	
 
 	var flowers = [];
-
+	// here I changed it to explode, in purpuse to get a much bigger effect on the flowers and get the interaction going
 	var types = {
 		"explode" : function(ctx, that) {
 			ctx.fillStyle = that.colorPrimary;
@@ -40,6 +40,7 @@ $(function() {
 
 	function generateFlower() {
 		var flower = [];
+		// here I changed the form and the size of the flowers, as well trying it to break slower then the original code. I aimd for it to continue "exploding" but didn't manage to.
 
 		var previousRadius = 0.0;
 		while(previousRadius <= 4.0) {
@@ -58,6 +59,7 @@ $(function() {
 				random(5, 10),
 				random(0.5, 2)
 			];	
+			// as you can see, I approach to the flowers by unshifting randomly with the theme explode, and changed shape. I basically randomly tried out different codes to see what happened. 
 
 			flower.unshift({
 				radius 			: previousRadius,
