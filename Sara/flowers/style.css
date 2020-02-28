@@ -1,0 +1,7 @@
+html, body {
+        overflow: visible;
+height: 100%;
+margin: 0;
+}
+
+/* i changed the overflow from hidden to visible in mind for it to default. Keeping in mind that I did change the height and shape of the "flowers" */
