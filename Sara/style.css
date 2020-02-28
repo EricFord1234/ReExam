@@ -1,6 +1,0 @@
-html, body {
-        overflow: visible;
-height: 100%;
-margin: 0;
-}
-/* i changed the overflow from hidden to visible in mind for it to "break through" more */
