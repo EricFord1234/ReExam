@@ -8,7 +8,7 @@
         this.vx = 0;
         this.vy = 0;
         this.radius = 1;
-        this.spurt = 0.5;
+        this.spurt = 5;
         this.color = '#fff';
         this.hasTarget = false;
         this;
@@ -37,8 +37,8 @@
           dist = sqrt(dx * dx + dy * dy);
           if (dist < target.threshold + target.radius && target.active) {
             this.hasTarget = true;
-            if (dist < target.radius * (target.life / target.radius) + 5) {
-              target.life -= 0.004;
+            if (dist < target.radius * (target.life / target.radius) + 100) {
+              target.life -= 0.001;
             }
           }
         }
@@ -55,7 +55,7 @@
         this.y += this.vy * ndt;
         this.vx *= 0.95;
         this.vy *= 0.95;
-        if (this.spurt > 0.5) {
+        if (this.spurt > 1) {
           this.spurt -= 0.1;
         }
         if (this.spurt <= 0.5 && !floor(random(1000))) {
@@ -85,9 +85,9 @@
         this.x = x;
         this.y = y;
         this.growthRadius = 0.0001;
-        this.radius = random(20, 50);
+        this.radius = random(50, 20);
         this.life = this.radius;
-        this.threshold = 50;
+        this.threshold = 300;
         this.active = false;
         this;
       }
@@ -110,8 +110,8 @@
       setup: function() {
         var i;
         this.tick = 0;
-        this.mouse.x = this.width / 2;
-        this.mouse.y = this.height / 2;
+        this.mouse.x = this.width / 100;
+        this.mouse.y = this.height / 100;
         this.food = (function() {
           var j, results;
           results = [];
@@ -153,7 +153,7 @@
       },
       draw: function() {
         var bug, food, i;
-        this.fillStyle = '#d33';
+        this.fillStyle = '#7AFF50';
         i = this.food.length;
         while (i--) {
           this.beginPath();
@@ -166,7 +166,7 @@
           this.fill();
         }
         this.beginPath();
-        this.fillStyle = '#fff';
+        this.fillStyle = '78EFFF';
         i = this.bugs.length;
         while (i--) {
           bug = this.bugs[i];
