@@ -21,18 +21,20 @@
  * THE SOFTWARE.
  */
 
+// The most important setting for adjusting "physics" in the example, here called "setting". 
+
 var settings = {
   interactive: false,
-  darkTheme: true,
-  headRadius: 6,
+  darkTheme: false,
+  headRadius: 10,
   thickness: 18,
-  tentacles: 40,
+  tentacles: 8,
   friction: 0.02,
   gravity: 0.5,
   colour: { h:0, s:0, v:0.1 },
   length: 70,
-  pulse: true,
-  wind: -0.5
+  pulse: false,
+  wind: 3,
 };
 
 var utils = {

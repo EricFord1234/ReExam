@@ -1,7 +1,5 @@
-###Muscular Hydrostats
+### Muscular Hydrostats
 
-An experiment with [inverse kinematics](http://en.wikipedia.org/wiki/Inverse_kinematics) to simulate tentacles.
+This is an experiment originally created by Justin Windle. [https://soulwire.co.uk].
 
-[See it in action.](http://soulwire.github.com/Muscular-Hydrostats/)
-
-Uses [sketch.js](https://github.com/soulwire/sketch.js) and [dat.GUI](http://code.google.com/p/dat-gui/)
+The experiment is using Sketch.js [https://github.com/soulwire/sketch.js] with [inverse kinematics](http://en.wikipedia.org/wiki/Inverse_kinematics) to simulate tentacles.
