@@ -1,0 +1,2 @@
+# Multi touch drawing
+//This is an example originally created by Justin Windle. [https://github.com/soulwire/sketch.js]. This is a simple example demonstrating how to set up a sketch and handling mouse and touch input. On mobile, multi touch is available.
